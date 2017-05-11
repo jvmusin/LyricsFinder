@@ -21,8 +21,8 @@ public class LyricsFinderApplication {
     }
 
     @GetMapping("/lyrics")
-    public Lyrics getLyrics(@RequestParam("artist") String artist, @RequestParam("trackId") String trackId) {
-        return lyricsFinders[0].find(artist, trackId);
+    public Lyrics getLyrics(@RequestParam("artist") String artist, @RequestParam("track") String track) {
+        return lyricsFinders[0].find(artist, track);
     }
 
 	public static void main(String[] args) {

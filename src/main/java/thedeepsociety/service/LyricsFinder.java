@@ -1,4 +1,4 @@
-package thedeepsociety.services;
+package thedeepsociety.service;
 
 public interface LyricsFinder {
     Lyrics find(String artist, String track);

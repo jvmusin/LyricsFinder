@@ -1,4 +1,4 @@
-package thedeepsociety.services;
+package thedeepsociety.service;
 
 import lombok.Builder;
 import lombok.Data;

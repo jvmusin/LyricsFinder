@@ -1,5 +1,5 @@
 server:
-  port: 8080
-services:
+  port: 80
+service:
   musixmatch:
     apiKey: e4159f4a29fb912b75320757b6a621b2

@@ -44,7 +44,7 @@ public class MusixMatchLyricsFinder implements LyricsFinder {
             }
 
             org.jmusixmatch.entity.lyrics.Lyrics lyrics = musixMatch.getLyrics(trackData.getTrackId());
-            log.info(() -> "Successfully found for " + artist + " " + track);
+            log.info("Successfully found for " + cacheKey(artist, track));
 
             result = Lyrics.builder()
                     .artist(trackData.getArtistName())
@@ -55,7 +55,7 @@ public class MusixMatchLyricsFinder implements LyricsFinder {
             cache(artist, track, result);
             return result;
         } catch (MusixMatchException e) {
-            log.throwing(MusixMatchLyricsFinder.class.toString(), "find(String, String)", e);
+            log.info("Not found for " + cacheKey(artist, track) + ": " + e.getMessage());
             cache(artist, track, null);
             return null;
         }

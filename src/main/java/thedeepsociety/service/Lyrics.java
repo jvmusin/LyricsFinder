@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class Lyrics {
-    public final String artist;
-    public final String track;
-    public final String text;
-    public final String source;
+    private final String artist;
+    private final String track;
+    private final String text;
+    private final String source;
 }
